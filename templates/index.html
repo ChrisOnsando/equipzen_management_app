@@ -18,7 +18,7 @@
         <div class="col-md-5 grid-margin">
         <div class="card">
             <div class="card-body">
-            <h4 class="card-title">Add Items</h4>
+            <h4 class="card-title">Add To Cart Items </h4>
             <form class="forms-sample" method="post" action="{% url 'Additem' %}">
                 {% csrf_token %}
                 <div class="form-group">
@@ -54,7 +54,7 @@
         <div class="col-md-7 grid-margin">
             <div class="card">
                 <div class="card-body">
-                    <h4 class="card-title">List All products</h4>
+                    <h4 class="card-title">Your Cart Items</h4>
                     <div class="table-responsive">
                         <table class="table table-hover" id="product-tbl" name="product-tbl">
                             <thead>
@@ -148,11 +148,11 @@
                                                 <div class="input-group">
                                                     <span class="input-group-text mdi mdi-cash"></span>
                                                     <div class="col-sm">
-                                                    <input type="number" class="form-control" name="discount" id="discount" placeholder="Price" oninput="updateDiscount()">
+                                                    <input type="number" class="form-control" name="discount" id="discount" step="0.01" placeholder="Price" oninput="updateDiscount()">
                                                     </div>
                                                     <span class="input-group-text mdi mdi-percent"></span>
                                                     <div class="col-sm">
-                                                    <input type="number" class="form-control" name="discount_percentage" id="discount_percentage" placeholder="Percentage" oninput="updatePercentage()">
+                                                    <input type="number" class="form-control" name="discount_percentage" id="discount_percentage" step="0.01" placeholder="Percentage" oninput="updatePercentage()">
                                                     </div>
                                                 </div>
                                                 </div>
